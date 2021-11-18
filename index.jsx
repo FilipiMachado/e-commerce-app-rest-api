@@ -3,7 +3,7 @@ const express = require("express");
 const app = express();
 // MongoDB
 const mongoose = require("mongoose");
-// Dotenv
+// Dotenv Config
 const dotenv = require("dotenv");
 
 dotenv.config();
