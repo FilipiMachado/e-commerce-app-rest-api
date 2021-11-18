@@ -17,6 +17,10 @@ mongoose
     console.log("Deu ruim!");
   });
 
-app.listen(5000, () => {
+  app.get("/api/test", (req, res) => {
+      console.log("Test is successful!");
+  })
+
+app.listen(process.env.PORT || 5000, () => {
   console.log("Server Backend bombando!");
 });
