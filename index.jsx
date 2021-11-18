@@ -5,6 +5,8 @@ const app = express();
 const mongoose = require("mongoose");
 // Dotenv Config
 const dotenv = require("dotenv");
+// Routes
+const userRoute = require("./routes/user.jsx");
 
 dotenv.config();
 
@@ -17,9 +19,8 @@ mongoose
     console.log("Deu ruim!");
   });
 
-  app.get("/api/test", (req, res) => {
-      console.log("Test is successful!");
-  })
+// User Routes
+app.use("/api/user", userRoute);
 
 app.listen(process.env.PORT || 5000, () => {
   console.log("Server Backend bombando!");
