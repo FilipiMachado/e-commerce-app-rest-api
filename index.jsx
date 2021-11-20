@@ -19,6 +19,7 @@ mongoose
     console.log("Deu ruim!");
   });
 
+app.use(express.json());
 // User Routes
 app.use("/api/users", userRoute);
 
